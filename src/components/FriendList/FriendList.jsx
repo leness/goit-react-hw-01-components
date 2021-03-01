@@ -5,8 +5,8 @@ const FriendList = ({friends}) => {
     return (
         <ul className={styles.friendList}>
         
-            {friends.map((el) => (
-                <FriendListItem key={el.id} {...el}/>
+            {friends.map(({id, ...rest}) => (
+                <FriendListItem key={id} {...rest}/>
         )   
         )}
         </ul> )

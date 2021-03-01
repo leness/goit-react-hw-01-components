@@ -1,4 +1,4 @@
-import defaultImage from '../default.jpg'
+import defaultImage from '../../images/default.jpg'
 import PropTypes from 'prop-types'
 import styles from './Profile.module.css'
 
@@ -41,8 +41,16 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string,
-    stats: PropTypes.object.isRequired,
+    stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 }
 
 export default Profile;
 
+// optionalObjectWithShape: PropTypes.shape({
+//     color: PropTypes.string,
+//     fontSize: PropTypes.number
+//   })

@@ -1,5 +1,4 @@
-// import PropTypes, { shape } from 'prop-types'
-// import PropTypes from 'prop-types'
+import PropTypes, { shape } from 'prop-types'
 import style from './TransactionHistory.module.css'
 
 const TransactionHistory = ({ items }) => (
@@ -27,13 +26,13 @@ const TransactionHistory = ({ items }) => (
 </table>
 )
 
-// TransactionHistory.propTypes = {
-//   items: PropTypes.arrayOf(PropTypes, shape({
-//     id: PropTypes.string.isRequired,
-//     type: PropTypes.string.isRequired,
-//     amount: PropTypes.number.isRequired,
-//     currency: PropTypes.string.isRequired,
-//   }))
-// }
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+  }))
+}
 
 export default TransactionHistory
